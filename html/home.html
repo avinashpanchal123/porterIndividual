@@ -400,6 +400,53 @@
              margin-top: 2vh;
              color: rgba(0, 0, 255, 0.753);
         }
+
+        /* styling show_vehicle_container */
+
+        #show_vehicle_container{
+            width: 100%;
+            height: 90vh;
+            border: 2px solid blue;
+            padding: 10vh 5%;
+        }
+        .show_wrapper{
+            width:  100%;
+            height: 100%;
+            border: 2px solid blue;
+            display: flex;
+        }
+        .show_items{
+            width: 50%;
+            height: 100%;
+            border: 2px solid black;
+
+        }
+        .img_show{
+            text-align: center;
+        }
+        .rent_box{
+            display: flex;
+        }
+
+        .info_dives{
+            width: 50%;
+            height: 100%;
+            border: 2px solid rebeccapurple;
+        }
+        .fares_box{
+            margin-top: 5vh;
+            width: 98%;
+            height: 12vh;
+            border: 1px solid gray;
+            font-size: 22px;
+            /* font-weight: bold; */
+            /* text-align: center; */
+            padding: 3.5vh 5%;
+            border-radius: 0.3rem;
+        }
+        .fares_box span{
+            color: rgba(0, 0, 255, 0.795);
+        }
         
 
 
@@ -655,7 +702,20 @@
     </div> -->
 
     <div id="show_vehicle_container">
-
+         <div class="show_wrapper">
+            <div class="show_items img_show">
+                <img src="https://d3o1t8vp7n8wsg.cloudfront.net/assets/website_revamp/large_vehicles/tata_ace-e92a36b3508e6e3b1804fd2015adbfb6c948bc35afab36699440785ed83b5b24.png" alt="">
+            </div>
+            <div class="show_items rent_box">
+                <div class="info_dives">
+                    <h2>RENT TATA ACE</h2>
+                    <div class="fares_box">
+                        Fares starting from <span>₹210</span>
+                    </div>
+                </div>
+                <div class="info_dives"></div>
+            </div>
+         </div>
     </div>
 
 </body>
