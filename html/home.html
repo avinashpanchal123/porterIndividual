@@ -13,7 +13,7 @@
         }
 
         /* Pickup and drop anywhere within the city box  styling */
-        .pickUp{
+        .Pickup{
             width: 37%;
             height: 30vh;
             border: 2px solid black;
@@ -24,17 +24,18 @@
         .pickUp > div{
             border: 1px solid red;
         }
-        .left{
+        .number_div{
             padding: 0;
             font-size: 40px;
             font-weight: 700;
             color: silver;
         }
-        .upper>h2{
-            margin: 10px 0;
+        .h2_margin{
+            margin-bottom: 1vh ;
+            margin-top: 1%;
         
         }
-        .right{
+        .pickUp_right{
             display: grid;
             grid-template-columns: repeat(1, 100%);
             grid-template-rows: repeat(2, 50%);
@@ -54,13 +55,40 @@
             border: 1px solid black;
         }
 
-        .pockUp_hr{
-            width: 50%;
+        .pickUp_hr{
+            width: 53%;
             margin-left: 5%;
+            margin-bottom: 5vh;
         }
 
 
         /* Choose vehicle of your choice box styling */
+
+        .firstGrid{
+            width: 55%;
+            margin-left: 5%;
+            border: 2px solid black;
+            padding: 0;
+            padding-bottom: 3vh;
+            display: grid;
+            grid-template-columns: 7% 90%;
+        }
+        .dark_grey{
+            color: gray;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .track_link{
+            font-size: 12px;
+            font-weight: bold;
+            text-decoration: none;
+            color: rgba(0, 0, 255, 0.699);
+        }
+
+
+
+        
 
 
 
@@ -69,13 +97,13 @@
 <body>
     <!-- Pickup and drop anywhere within the city box -->
 
-    <div class="pickUp">
-        <div class="left">
+    <div class="Pickup">
+        <div class="number_div">
             1
         </div>
-        <div class="right">
+        <div class="pickUp_right">
                <div class="upper">
-                    <h2>Pickup and drop anywhere within the city</h2>
+                    <h2 class="h2_margin">Pickup and drop anywhere within the city</h2>
                     <p>Choose your pickup & drop location from within the city</p>
                </div>
                <div class="lower">
@@ -88,9 +116,30 @@
         </div>
     </div>
 
-    <hr class="pockUp_hr">
+    <hr class="pickUp_hr">
 
     <!-- Choose vehicle of your choice box -->
+
+    <div class="firstGrid">
+        <div class="number_div"> 2</div>
+        <div>
+            <h2 class="h2_margin">Choose vehicle of your choice</h2>
+            <p>Get quotes for vehicles which can carry from 20 kgs to 2000 kgs and book instantly without any waiting</p>
+        </div>
+    </div>
+    <hr class="pickUp_hr">
+
+    <!-- Real time tracking box -->
+
+    <div class="firstGrid">
+        <div class="number_div"> 3</div>
+        <div>
+            <h2 class="h2_margin">Choose vehicle of your choice</h2>
+            <p>Our verified partner will ensure that your goods are transported safely to the destination. You can monitor the trip with live vehicle tracking and regular 
+                sms/email updates from our <span class="dark_grey">MOBILE APP</span> or</p>
+                <a class="track_link" href="">TRACK ORDER HERE</a>
+        </div>
+    </div>
 
 </body>
 </html>
