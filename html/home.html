@@ -309,6 +309,103 @@
             color: rgba(255, 255, 255, 0.877);
 
         }
+
+        /* styling vehicles container */
+
+        .vehicles_container{
+            width: 100%;
+            height: 32vh;
+            position: absolute;
+            bottom: 0%;
+            overflow: scroll;
+            border: 2px solid green;
+            display: grid;
+            grid-template-columns: repeat(8, 20%);
+            gap: 5%;
+        }
+        .vehicle_box{
+            border: 2px solid peru;
+            height: 100%;
+            
+        }
+
+        .img_wrapper{
+            width: 50%;
+            height: 100%;
+            border: 2px solid rebeccapurple;
+            margin: auto;
+            cursor: pointer;
+        }
+
+        .vehicle_img{
+            width: 100%;
+            height: 70%;
+            border: 2px solid black;
+            border-radius: 50%;
+            margin: auto;
+        }
+        #tata_ace{
+            background-image: url("https://d35ppnqksufxmo.cloudfront.net/frontend_website/fb92597054186e1d2cdba0a9e322e666.jpg");
+            /* background-position: top; */
+            background-size: cover;
+            background-position: top;
+        }
+        #tata_407{
+            background-image: url("https://d35ppnqksufxmo.cloudfront.net/frontend_website/6a8329bd1148a04772a360a13657597c.jpg");
+            /* background-position: top; */
+            background-size: cover;
+            background-position: top;
+        }
+        #three_wheeler{
+            background-image: url("https://d35ppnqksufxmo.cloudfront.net/frontend_website/ce1f9c469e4ff9a379cafae944d36c07.jpg");
+            /* background-position: top; */
+            background-size: cover;
+            background-position: top;
+        }
+        #ace_helper{
+            background-image: url("https://d35ppnqksufxmo.cloudfront.net/frontend_website/fb92597054186e1d2cdba0a9e322e666.jpg");
+            /* background-position: top; */
+            background-size: cover;
+            background-position: top;
+        }
+        #three_wheeler_helper{
+            background-image: url("https://d35ppnqksufxmo.cloudfront.net/frontend_website/bd670d8590768f0551b0f6a8fbed6c50.jpg");
+            /* background-position: top; */
+            background-size: cover;
+            background-position: top;
+        }
+        #ft_ton{
+            background-image: url("https://d35ppnqksufxmo.cloudfront.net/frontend_website/4761831d3a284b0953f077b6d9dd94b9.jpg");
+            /* background-position: top; */
+            background-size: cover;
+            background-position: top;
+        }
+        #ft_pickUp{
+            background-image: url("https://d35ppnqksufxmo.cloudfront.net/frontend_website/33896bcd86407d1f53f9c7d82548cd58.jpg");
+            /* background-position: top; */
+            background-size: cover;
+            background-position: top;
+        }
+        #two_wheeler{
+            background-image: url("https://d35ppnqksufxmo.cloudfront.net/frontend_website/2cdf1bae63c64c3d17aed68bf2703d55.jpg");
+            /* background-position: top; */
+            background-size: cover;
+            background-position: top;
+        }
+
+        .vehicle_name{
+            font-size: 0.9rem;
+            font-weight: bolder;
+             text-align: center;
+             margin-top: 2vh;
+             color: rgba(0, 0, 255, 0.753);
+        }
+        
+
+
+
+
+
     </style>
 </head>
 
@@ -466,11 +563,99 @@
             </div>
         </div>
 
+
+        <div class="vehicles_container">
+            <div class="vehicle_box">
+                <div class="img_wrapper">
+                    <div class="vehicle_img" id="tata_ace">
+
+                    </div>
+                    <div class="vehicle_name">
+                         TATA ACE
+                    </div>
+                </div>
+            </div>
+            <div class="vehicle_box">
+               <div class="img_wrapper">
+                <div class="vehicle_img" id="tata_407">
+
+                </div>
+                <div class="vehicle_name">
+                    TATA407
+               </div>
+               </div>
+            </div>
+            <div class="vehicle_box">
+               <div class="img_wrapper">
+                <div class="vehicle_img" id="three_wheeler">
+
+                </div>
+                <div class="vehicle_name">
+                    3 WHEELER
+               </div>
+               </div>
+            </div>
+            <div class="vehicle_box">
+                <div class="img_wrapper">
+                    <div class="vehicle_img" id="ace_helper">
+
+                    </div>
+                    <div class="vehicle_name">
+                        ACE (HELPER)
+                   </div>
+                </div>
+            </div>
+            <div class="vehicle_box">
+              <div class="img_wrapper">
+                    <div class="vehicle_img" id="three_wheeler_helper">
+
+                    </div>
+                    <div class="vehicle_name">
+                        3 WHEELER (HELPER)
+                   </div>
+              </div>
+            </div>
+            <div class="vehicle_box">
+                <div class="img_wrapper">
+                    <div class="vehicle_img" id="ft_ton">
+
+                    </div>
+                    <div class="vehicle_name">
+                        8FT 1TON
+                   </div>
+                </div>
+            </div>
+            <div class="vehicle_box">
+                <div class="img_wrapper">
+                <div class="vehicle_img" id="ft_pickUp">
+
+                </div>
+                <div class="vehicle_name">
+                    8FT PICKUP
+               </div>
+            </div>
+            </div>
+            <div class="vehicle_box">
+                <div class="img_wrapper">
+                <div class="vehicle_img" id="two_wheeler">
+
+                </div>
+                <div class="vehicle_name">
+                    2 WHEELER
+               </div>
+            </div>
+            </div>
+        </div>
+
     </div>
 
 
 
-    </div>
+    <!-- </div>
+    </div> -->
+
+    <div id="show_vehicle_container">
+
     </div>
 
 </body>
