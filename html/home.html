@@ -12,7 +12,7 @@
             margin: 0;
             box-sizing: border-box;
         }
-        
+
 
         .top_margin {
             margin-top: 1.5vh;
@@ -171,9 +171,10 @@
             border: 2px solid red;
             margin: 4.5vh auto;
             background-color: white;
-            
+
 
         }
+
 
         .text_div {
             text-align: center;
@@ -206,7 +207,80 @@
             right: 6%;
         }
 
+        /* styling members container */
 
+        .member_container {
+            width: 83%;
+            height: 60vh;
+            border: 2px solid black;
+            position: absolute;
+            z-index: 10;
+            top: 93vh;
+            left: 8%;
+            display: flex;
+            justify-content: space-between;
+
+
+        }
+
+        .member {
+            width: 30%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.753);
+            border: 2px solid red;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .description {
+            width: 100%;
+            height: 75%;
+            border: 2px solid blue;
+            padding: 10%;
+            font-size: large;
+
+        }
+
+        .member_img {
+            position: absolute;
+            width: 27%;
+            height: 23%;
+            border-radius: 50%;
+            right: 5%;
+
+            top: 65%;
+            border: 2.5px solid white;
+        }
+
+        #vinay {
+            background-image: url("https://d35ppnqksufxmo.cloudfront.net/frontend_website/6a046838867f9ce5ac4af9e3f377d9c2.jpg");
+            background-position: left;
+             background-size: cover;
+        }
+
+        #dinesh {
+            background-image: url("https://d35ppnqksufxmo.cloudfront.net/frontend_website/6a046838867f9ce5ac4af9e3f377d9c2.jpg");
+             background-position: center;
+             background-size: cover;
+        }
+
+        #ashok{
+            background-image: url("https://d35ppnqksufxmo.cloudfront.net/frontend_website/6a046838867f9ce5ac4af9e3f377d9c2.jpg");
+             background-position: right;
+             background-size: cover;
+        }
+
+
+        .info {
+            width: 100%;
+            height: 25%;
+            border: 2px solid red;
+            background-color: rgba(0, 0, 255, 0.801);
+            padding: 2vh 10%;
+            color: rgba(255, 255, 255, 0.877);
+
+        }
     </style>
 </head>
 
@@ -323,9 +397,45 @@
         </div>
 
         <div class="member_container">
-            <div class="member"></div>
-            <div class="member"></div>
-            <div class="member"></div>
+            <div class="member">
+                <div class="description">
+                    “Way better than naaka waalas. Have shifted all my logistics needs to Porter and I can now safely
+                    focus on my business growth. Amazing service!”
+                </div>
+                <div class="member_img" id="vinay">
+
+                </div>
+                <div class="info">
+                    <h3>VINAY</h3>
+                    <h4 class="top_margin">Bangalore</h4>
+                </div>
+            </div>
+            <div class="member">
+                <div class="description">
+                    “Excellent service by multiple drivers. I own a business and do multiple shiftings. Rather than ask
+                    local drivers and bargain every time, I use porter which fulfils all my need. Thanks a lot!”
+                </div>
+                <div class="member_img" id="dinesh">
+
+                </div>
+                <div class="info">
+                    <h3>DINESH</h3>
+                    <h4 class="top_margin">Mumbai</h4>
+                </div>
+            </div>
+            <div class="member">
+                <div class="description">
+                    “Have had an amazing experience. Had three successful deliveries where it’s a struggle to arrange a
+                    tempo service for your desired pickup and drop off. Must try this app!”
+                </div>
+                <div class="member_img" id="ashok">
+
+                </div>
+                <div class="info">
+                    <h3>ASHOK</h3>
+                    <h4 class="top_margin">Delhi NCR</h4>
+                </div>
+            </div>
         </div>
 
     </div>
