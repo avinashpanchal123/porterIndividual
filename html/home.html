@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        /* Pickup and drop anywhere within the city box  styling */
+        .pickUp{
+            width: 37%;
+            height: 30vh;
+            border: 2px solid black;
+            margin-left: 5%;
+            display: grid;
+            grid-template-columns: 10% 90%;
+        }
+        .pickUp > div{
+            border: 1px solid red;
+        }
+        .left{
+            padding: 0;
+            font-size: 40px;
+            font-weight: 700;
+            color: silver;
+        }
+        .upper>h2{
+            margin: 10px 0;
+        
+        }
+        .right{
+            display: grid;
+            grid-template-columns: repeat(1, 100%);
+            grid-template-rows: repeat(2, 50%);
+        }
+        .logoes{
+           width: 70%;
+           height: 40%;
+           border: 2px solid gray;
+           margin-top: 1vh;
+           display: grid;
+           grid-template-columns: 40% 40%;
+           gap: 10%;
+        }
+        .logoes div{
+            height: 100%;
+            background-color: indigo;
+            border: 1px solid black;
+        }
+
+        .pockUp_hr{
+            width: 50%;
+            margin-left: 5%;
+        }
+
+
+        /* Choose vehicle of your choice box styling */
+
+
+
+    </style>
+</head>
+<body>
+    <!-- Pickup and drop anywhere within the city box -->
+
+    <div class="pickUp">
+        <div class="left">
+            1
+        </div>
+        <div class="right">
+               <div class="upper">
+                    <h2>Pickup and drop anywhere within the city</h2>
+                    <p>Choose your pickup & drop location from within the city</p>
+               </div>
+               <div class="lower">
+                   <h4>Download the Porter app on</h4>
+                    <div class="logoes">
+                        <div></div>
+                        <div></div>
+                    </div>
+               </div>
+        </div>
+    </div>
+
+    <hr class="pockUp_hr">
+
+    <!-- Choose vehicle of your choice box -->
+
+</body>
+</html>
