@@ -1,145 +1,340 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        *{
+        * {
             padding: 0;
             margin: 0;
             box-sizing: border-box;
         }
+        
+
+        .top_margin {
+            margin-top: 1.5vh;
+        }
+
+        .bottom_margin {
+            margin-bottom: 1.5vh;
+        }
+
+        #app_promo {
+            width: 100%;
+            height: 100vh;
+            padding: 5% 5%;
+            border: 2px solid black;
+        }
 
         /* Pickup and drop anywhere within the city box  styling */
-        .Pickup{
+        .Pickup {
             width: 37%;
             height: 30vh;
             border: 2px solid black;
-            margin-left: 5%;
+            /* margin-left: 5%; */
             display: grid;
             grid-template-columns: 10% 90%;
         }
-        .pickUp > div{
+
+        .pickUp>div {
             border: 1px solid red;
         }
-        .number_div{
+
+        .number_div {
             padding: 0;
-            font-size: 40px;
+            font-size: 45px;
             font-weight: 700;
             color: silver;
         }
-        .h2_margin{
-            margin-bottom: 1vh ;
+
+        .h2_margin {
+            margin-bottom: 1vh;
             margin-top: 1%;
-        
+
         }
-        .pickUp_right{
+
+        .pickUp_right {
             display: grid;
             grid-template-columns: repeat(1, 100%);
             grid-template-rows: repeat(2, 50%);
         }
-        .logoes{
-           width: 70%;
-           height: 40%;
-           border: 2px solid gray;
-           margin-top: 1vh;
-           display: grid;
-           grid-template-columns: 40% 40%;
-           gap: 10%;
+
+        .logoes {
+            width: 70%;
+            height: 40%;
+            border: 2px solid gray;
+            margin-top: 1vh;
+            display: grid;
+            grid-template-columns: 40% 40%;
+            gap: 10%;
         }
-        .logoes div{
+
+        .logoes div {
             height: 100%;
             background-color: indigo;
             border: 1px solid black;
         }
 
-        .pickUp_hr{
+        .pickUp_hr {
             width: 53%;
-            margin-left: 5%;
+            /* margin-left: 5%; */
             margin-bottom: 5vh;
         }
 
 
         /* Choose vehicle of your choice box styling */
 
-        .firstGrid{
+        .firstGrid {
             width: 55%;
-            margin-left: 5%;
+            /* margin-left: 5%; */
             border: 2px solid black;
             padding: 0;
             padding-bottom: 3vh;
             display: grid;
             grid-template-columns: 7% 90%;
         }
-        .dark_grey{
+
+        .dark_grey {
             color: gray;
             font-size: 12px;
             font-weight: bold;
         }
 
-        .track_link{
+        .track_link {
             font-size: 12px;
             font-weight: bold;
             text-decoration: none;
             color: rgba(0, 0, 255, 0.699);
         }
 
+        /* offer_review styling */
 
+        /* WHAT WE OFFER box */
 
-        
+        #offer_review {
+            position: relative;
+            width: 100%;
+            height: 200vh;
+            border: 5px solid rebeccapurple;
+            padding: 6%;
+            overflow: hidden;
+        }
 
+        .big_hr {
+            height: 0.6vh;
+            width: 2.5%;
+            background-color: blue;
+            border-radius: 20%;
+            margin-top: 3vh;
+        }
+
+        .blue_rotate {
+            width: 150%;
+            overflow: hidden;
+            height: 55vh;
+            background-color: rgba(0, 0, 255, 0.568);
+            position: absolute;
+            z-index: 10;
+            left: -45%;
+            /* transform-origin: (left, bottom); */
+            transform: rotate(-6deg);
+        }
+
+        /* styling facilities div box */
+        .facilities {
+            width: 78%;
+            height: 45vh;
+            margin: auto;
+            position: absolute;
+            z-index: 11;
+            top: 20vh;
+            left: 12%;
+            border: 2px solid red;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1%;
+
+        }
+
+        .facilities>div {
+            border: 1px solid black;
+            height: 100%;
+
+        }
+
+        .img_div {
+            width: 80%;
+            height: 50%;
+            border: 2px solid red;
+            margin: 4.5vh auto;
+            background-color: white;
+            
+
+        }
+
+        .text_div {
+            text-align: center;
+            color: white;
+        }
+
+        .yellow_rotate {
+            width: 150%;
+            overflow: hidden;
+            height: 55vh;
+            background-color: rgba(255, 255, 0, 0.781);
+            position: absolute;
+            z-index: 7;
+            left: -45%;
+            top: 75vh;
+            /* transform-origin: (left, bottom); */
+            transform: rotate(6deg);
+
+        }
+
+        .right_text {
+            position: absolute;
+            right: 6%;
+            top: 75vh;
+        }
+
+        .right_hr {
+            position: absolute;
+            top: 78vh;
+            right: 6%;
+        }
 
 
     </style>
 </head>
-<body>
-    <!-- Pickup and drop anywhere within the city box -->
 
-    <div class="Pickup">
-        <div class="number_div">
-            1
-        </div>
-        <div class="pickUp_right">
-               <div class="upper">
+<body>
+    <div id="app_promo">
+        <!-- Pickup and drop anywhere within the city box -->
+
+        <div class="Pickup">
+            <div class="number_div">
+                1
+            </div>
+            <div class="pickUp_right">
+                <div class="upper">
                     <h2 class="h2_margin">Pickup and drop anywhere within the city</h2>
                     <p>Choose your pickup & drop location from within the city</p>
-               </div>
-               <div class="lower">
-                   <h4>Download the Porter app on</h4>
+                </div>
+                <div class="lower">
+                    <h4>Download the Porter app on</h4>
                     <div class="logoes">
                         <div></div>
                         <div></div>
                     </div>
-               </div>
+                </div>
+            </div>
         </div>
-    </div>
 
-    <hr class="pickUp_hr">
+        <hr class="pickUp_hr">
 
-    <!-- Choose vehicle of your choice box -->
+        <!-- Choose vehicle of your choice box -->
 
-    <div class="firstGrid">
-        <div class="number_div"> 2</div>
-        <div>
-            <h2 class="h2_margin">Choose vehicle of your choice</h2>
-            <p>Get quotes for vehicles which can carry from 20 kgs to 2000 kgs and book instantly without any waiting</p>
+        <div class="firstGrid">
+            <div class="number_div"> 2</div>
+            <div>
+                <h2 class="h2_margin">Choose vehicle of your choice</h2>
+                <p>Get quotes for vehicles which can carry from 20 kgs to 2000 kgs and book instantly without any
+                    waiting</p>
+            </div>
         </div>
-    </div>
-    <hr class="pickUp_hr">
+        <hr class="pickUp_hr">
 
-    <!-- Real time tracking box -->
+        <!-- Real time tracking box -->
 
-    <div class="firstGrid">
-        <div class="number_div"> 3</div>
-        <div>
-            <h2 class="h2_margin">Choose vehicle of your choice</h2>
-            <p>Our verified partner will ensure that your goods are transported safely to the destination. You can monitor the trip with live vehicle tracking and regular 
-                sms/email updates from our <span class="dark_grey">MOBILE APP</span> or</p>
+        <div class="firstGrid">
+            <div class="number_div"> 3</div>
+            <div>
+                <h2 class="h2_margin">Choose vehicle of your choice</h2>
+                <p>Our verified partner will ensure that your goods are transported safely to the destination. You can
+                    monitor the trip with live vehicle tracking and regular
+                    sms/email updates from our <span class="dark_grey">MOBILE APP</span> or</p>
                 <a class="track_link" href="">TRACK ORDER HERE</a>
+            </div>
         </div>
+    </div>
+
+    <div id="offer_review">
+        <div class="offer_heading">
+            <h2>WHAT WE OFFER</h2>
+        </div>
+        <div class="big_hr">
+
+        </div>
+
+        <div class="blue_rotate">
+
+        </div>
+        <div class="facilities">
+            <div class="items">
+                <div class="img_div ">
+
+                </div>
+                <div class="text_div">
+                    <h4 class="top_margin bottom_margin">Hassle-Free truck rental</h4>
+                    <p>Book mini truck online. Whenever you need, wherever you need</p>
+                </div>
+            </div>
+            <div class="items">
+                <div class="img_div ">
+
+                </div>
+                <div class="text_div">
+                    <h4 class="top_margin bottom_margin">Transparent Pricing</h4>
+                    <p>Enjoy the most affordable rates in town with our transparent pricing</p>
+                </div>
+            </div>
+            <div class="items">
+                <div class="img_div ">
+
+                </div>
+                <div class="text_div">
+                    <h4 class="top_margin bottom_margin">Realtime Tracking</h4>
+                    <p>Track your goods movement across the city with our app</p>
+                </div>
+            </div>
+            <div class="items">
+                <div class="img_div ">
+
+                </div>
+                <div class="text_div">
+                    <h4 class="top_margin bottom_margin">Safe and Reliable Trucks</h4>
+                    <p>Superior safety ensured with our team of verified & trained partners</p>
+                </div>
+            </div>
+        </div>
+        <div class="right_text">
+            <h2>WHAT PEOPLE SAY</h2>
+
+        </div>
+        <div class="yellow_rotate">
+
+        </div>
+
+        <div class="big_hr right_hr">
+
+        </div>
+
+        <div class="member_container">
+            <div class="member"></div>
+            <div class="member"></div>
+            <div class="member"></div>
+        </div>
+
+    </div>
+
+
+
+    </div>
     </div>
 
 </body>
+
 </html>
