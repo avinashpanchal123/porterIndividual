@@ -77,11 +77,12 @@
             /* grid-template-columns: 45% 45%;
             gap: 5%; */
         }
-        .logoes > div{
+
+        .logoes>div {
             width: 45%;
             height: 100%;
         }
-       
+
 
         /* .logoes div {
             height: 100%;
@@ -342,7 +343,7 @@
         }
 
         #left_btn {
-            display: block;
+            display: none;
             width: 45%;
             height: 20%;
             border: 2px solid red;
@@ -371,86 +372,91 @@
             width: 100%;
             height: 32vh;
             position: absolute;
+            /* position: relative; */
             bottom: 0%;
             /* overflow: scroll; */
             border: 2px solid green;
             display: grid;
-            grid-template-columns: repeat(8, 20%);
-            gap: 3.5%;
+            grid-template-columns: repeat(8, 11%);
+            gap: 7%;
+            /* transform: translateX(); */
         }
 
         .vehicle_box {
             border: 2px solid peru;
             height: 100%;
+            margin-left: 4%;
 
         }
 
         .img_wrapper {
-            width: 50%;
+            width: 100%;
             height: 100%;
             border: 2px solid rebeccapurple;
-            margin: auto;
+            /* margin: auto; */
             cursor: pointer;
+            transition-duration: 1s;
+            /* transform: translateX(500px); */
         }
 
         .vehicle_img {
             width: 100%;
-            height: 64%;
+            height: 67%;
             border: 2px solid black;
             border-radius: 50%;
             margin: auto;
         }
 
-        #tata_ace {
+        #one {
             background-image: url("https://d35ppnqksufxmo.cloudfront.net/frontend_website/fb92597054186e1d2cdba0a9e322e666.jpg");
             /* background-position: top; */
             background-size: cover;
             background-position: top;
         }
 
-        #tata_407 {
+        #two {
             background-image: url("https://d35ppnqksufxmo.cloudfront.net/frontend_website/6a8329bd1148a04772a360a13657597c.jpg");
             /* background-position: top; */
             background-size: cover;
             background-position: top;
         }
 
-        #three_wheeler {
+        #three {
             background-image: url("https://d35ppnqksufxmo.cloudfront.net/frontend_website/ce1f9c469e4ff9a379cafae944d36c07.jpg");
             /* background-position: top; */
             background-size: cover;
             background-position: top;
         }
 
-        #ace_helper {
+        #four {
             background-image: url("https://d35ppnqksufxmo.cloudfront.net/frontend_website/fb92597054186e1d2cdba0a9e322e666.jpg");
             /* background-position: top; */
             background-size: cover;
             background-position: top;
         }
 
-        #three_wheeler_helper {
+        #five {
             background-image: url("https://d35ppnqksufxmo.cloudfront.net/frontend_website/bd670d8590768f0551b0f6a8fbed6c50.jpg");
             /* background-position: top; */
             background-size: cover;
             background-position: top;
         }
 
-        #ft_ton {
+        #six {
             background-image: url("https://d35ppnqksufxmo.cloudfront.net/frontend_website/4761831d3a284b0953f077b6d9dd94b9.jpg");
             /* background-position: top; */
             background-size: cover;
             background-position: top;
         }
 
-        #ft_pickUp {
+        #seven {
             background-image: url("https://d35ppnqksufxmo.cloudfront.net/frontend_website/33896bcd86407d1f53f9c7d82548cd58.jpg");
             /* background-position: top; */
             background-size: cover;
             background-position: top;
         }
 
-        #two_wheeler {
+        #eight {
             background-image: url("https://d35ppnqksufxmo.cloudfront.net/frontend_website/2cdf1bae63c64c3d17aed68bf2703d55.jpg");
             /* background-position: top; */
             background-size: cover;
@@ -537,10 +543,12 @@
                     <h4>Download the Porter app on</h4>
                     <div class="logoes">
                         <div>
-                            <img src="https://d35ppnqksufxmo.cloudfront.net/frontend_website/7d201f8ab29758060a506b8f5ca8802e.svg" alt="">
+                            <img src="https://d35ppnqksufxmo.cloudfront.net/frontend_website/7d201f8ab29758060a506b8f5ca8802e.svg"
+                                alt="">
                         </div>
                         <div>
-                            <img src="https://d35ppnqksufxmo.cloudfront.net/frontend_website/064db81ca0ea310731f96e53580dcc99.svg" alt="">
+                            <img src="https://d35ppnqksufxmo.cloudfront.net/frontend_website/064db81ca0ea310731f96e53580dcc99.svg"
+                                alt="">
                         </div>
                     </div>
                 </div>
@@ -682,7 +690,7 @@
         <div id="vehicles_container">
             <div class="vehicle_box">
                 <div class="img_wrapper">
-                    <div class="vehicle_img" id="tata_ace">
+                    <div class="vehicle_img" id="one">
 
                     </div>
                     <div class="vehicle_name">
@@ -692,7 +700,7 @@
             </div>
             <div class="vehicle_box">
                 <div class="img_wrapper">
-                    <div class="vehicle_img" id="tata_407">
+                    <div class="vehicle_img" id="two">
 
                     </div>
                     <div class="vehicle_name">
@@ -702,7 +710,7 @@
             </div>
             <div class="vehicle_box">
                 <div class="img_wrapper">
-                    <div class="vehicle_img" id="three_wheeler">
+                    <div class="vehicle_img" id="three">
 
                     </div>
                     <div class="vehicle_name">
@@ -712,7 +720,7 @@
             </div>
             <div class="vehicle_box">
                 <div class="img_wrapper">
-                    <div class="vehicle_img" id="ace_helper">
+                    <div class="vehicle_img" id="four">
 
                     </div>
                     <div class="vehicle_name">
@@ -722,7 +730,7 @@
             </div>
             <div class="vehicle_box">
                 <div class="img_wrapper">
-                    <div class="vehicle_img" id="three_wheeler_helper">
+                    <div class="vehicle_img" id="five">
 
                     </div>
                     <div class="vehicle_name">
@@ -732,7 +740,7 @@
             </div>
             <div class="vehicle_box">
                 <div class="img_wrapper">
-                    <div class="vehicle_img" id="ft_ton">
+                    <div class="vehicle_img" id="six">
 
                     </div>
                     <div class="vehicle_name">
@@ -742,7 +750,7 @@
             </div>
             <div class="vehicle_box">
                 <div class="img_wrapper">
-                    <div class="vehicle_img" id="ft_pickUp">
+                    <div class="vehicle_img" id="seven">
 
                     </div>
                     <div class="vehicle_name">
@@ -752,7 +760,7 @@
             </div>
             <div class="vehicle_box">
                 <div class="img_wrapper">
-                    <div class="vehicle_img" id="two_wheeler">
+                    <div class="vehicle_img" id="eight">
 
                     </div>
                     <div class="vehicle_name">
@@ -809,31 +817,96 @@
 
 <script>
 
-    let vehicles_container = document.getElementById("vehicles_container");
+    let vehicle_boxes = document.querySelectorAll(".img_wrapper");
+
+
+    function changeVehicle() {
+        for (let i = 0; i < vehicle_boxes.length; i++) {
+            vehicle_boxes[i].onclick = function () {
+                avi(i)
+            }
+        }
+    }
+
+    changeVehicle()
+
+    vehicle_ids = {
+        0: "one",
+        1: "two",
+        2: "three",
+        3: "four",
+        4: "five",
+        5: "six",
+        6: "seven",
+        7: "eight"
+    }
+
+    function avi(i) {
+        uppendVehicle(i)
+        let id = i.toString();
+        id = vehicle_ids[id];
+
+        let vehicle_img = document.getElementById(`${id}`);
+
+        for (let i = 0; i < 7; i++) {
+            let id = i.toString();
+            id = vehicle_ids[id];
+
+            let vehicle_img = document.getElementById(`${id}`);
+            vehicle_img.style.backgroundPositionY = "top"
+        }
+
+        vehicle_img.style.backgroundPositionY = "bottom"
+    }
+
+
+
+    let left = -49.2;
+
+    let left_btn = document.getElementById("left_btn");
+
+    let right_btn = document.getElementById("right_btn")
+
 
     function khisakLeft() {
-
-        vehicles_container.style.transform = "translate(-800px , 0px)"
+        left_btn.style.display = "none";
+        right_btn.style.display = "block"
+        for (let box of vehicle_boxes) {
+            box.style.transform = `translateX(0rem)`
+        }
     }
-
     function khisakRight() {
-        vehicles_container.style.transform = "translate(200px , 0px)"
+
+        left_btn.style.display = "block";
+        right_btn.style.display = "none"
+        for (let box of vehicle_boxes) {
+            box.style.transform = `translateX(${left}rem)`
+        }
     }
+
+
+
 
 
     let rent_details = [
         {
-            vehicle_img:"TATA ACE",
-            heading : "",
-            price : "₹210",
-            distance : "1.0 km",
-            time:"70 minutes",
-            capacity : "750kg",
-            size : "7ft x 4ft x 5ft"
-            
+            vehicle_img: "https://d3o1t8vp7n8wsg.cloudfront.net/assets/website_revamp/large_vehicles/tata_ace-e92a36b3508e6e3b1804fd2015adbfb6c948bc35afab36699440785ed83b5b24.png",
+            heading: "TATA ACE",
+            price: "₹210",
+            distance: "1.0 km",
+            time: "70 minutes",
+            capacity: "750kg",
+            size: "7ft x 4ft x 5ft"
+
         }
     ]
 
-    
+
+
+    function uppendVehicle(id){
+            
+    }
+
+
 
 </script>
