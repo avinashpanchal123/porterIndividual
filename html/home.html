@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
     <style>
         body {
             background-color: rgba(240, 240, 240, 0.418);
@@ -487,10 +488,11 @@
             display: flex;
         }
 
-        .img_show {
 
-            text-align: center;
-        }
+
+         #vehicle_img_box{
+             padding-left: 3%;
+         }
 
 
         .show_items {
@@ -516,12 +518,12 @@
             border: 2px solid green;
         }
 
-        .right_rent_item{
+        .right_rent_item {
             width: 40%;
             height: 100%;
         }
 
-        .fares_box{
+        .fares_box {
             width: 92%;
             height: 12vh;
             border: 1px solid black;
@@ -534,26 +536,25 @@
             /* font-weight: bolder; */
         }
 
-        #rent_price{
+        #rent_price {
             color: blue;
         }
 
-        #para_div > div{
+        #para_div>div {
             font-size: 0.7rem;
             color: rgb(88, 88, 88);
             margin-top: 2vh;
         }
 
-        .capacity_items{
+        .capacity_items {
             margin-top: 1vh;
         }
 
-        .bold_font{
+        .bold_font {
             font-weight: bolder;
         }
-
-      
     </style>
+
 </head>
 
 <body>
@@ -824,8 +825,10 @@
     <div id="show_vehicle_container">
         <div class="show_wrapper">
             <div class="show_items img_show" id="vehicle_img_box">
+
                 <img src="https://d3o1t8vp7n8wsg.cloudfront.net/assets/website_revamp/large_vehicles/tata_ace-e92a36b3508e6e3b1804fd2015adbfb6c948bc35afab36699440785ed83b5b24.png"
                     alt="">
+
             </div>
             <div class="show_items ">
 
@@ -836,17 +839,18 @@
                         <div class="fares_box">
                             Fares starting from <span id="rent_price">₹210</span>
                         </div>
-                     <div id="para_div">
-                        <div>
-                            Base fare includes <span id="distance"> 1.0 km</span> distance and <span id="time">70 </span> minutes of time
+                        <div id="para_div">
+                            <div>
+                                Base fare includes <span id="distance"> 1.0 km</span> distance and <span id="time">70
+                                </span> minutes of time
+                            </div>
+                            <div>
+                                Pricing may vary based on your locality.
+                            </div>
+                            <div>
+                                Road tax, parking etc as applicable over and above ride fare.
+                            </div>
                         </div>
-                        <div>
-                            Pricing may vary based on your locality.
-                        </div>
-                        <div>
-                            Road tax, parking etc as applicable over and above ride fare.
-                        </div>
-                     </div>
                     </div>
 
                     <div class="rent_items right_rent_item">
@@ -858,7 +862,7 @@
                             Size(LxBxH): <span class="bold_font" id="size">7ft x 4ft x 5ft</span>
                         </div>
                     </div>
-                      
+
                 </div>
 
 
@@ -1038,6 +1042,11 @@
 
         let img = document.createElement("img");
 
+        if( id == 2 || id == 4 || id ==7){
+            img.style.width = "100%";
+            img.style.height = '100%'
+        }
+
         img.src = rent_details[id].vehicle_img;
 
         let rent_vehicle = document.getElementById("rent_vehicle");
@@ -1062,7 +1071,7 @@
 
         let vehicle_capacity = document.getElementById("capacity");
 
-        vehicle_capacity.textContent =  rent_details[id].capacity;
+        vehicle_capacity.textContent = rent_details[id].capacity;
 
         let vehicle_size = document.getElementById("size");
 
