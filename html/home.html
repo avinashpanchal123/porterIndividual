@@ -7,10 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body{
+        body {
             background-color: rgba(240, 240, 240, 0.418);
             font-family: 'Titillium Web', sans-serif;
         }
+
         * {
             padding: 0;
             margin: 0;
@@ -67,20 +68,26 @@
         }
 
         .logoes {
-            width: 70%;
-            height: 40%;
+            width: 78%;
+            height: 45%;
             border: 2px solid gray;
             margin-top: 1vh;
-            display: grid;
-            grid-template-columns: 40% 40%;
-            gap: 10%;
+            display: flex;
+            justify-content: space-between;
+            /* grid-template-columns: 45% 45%;
+            gap: 5%; */
         }
+        .logoes > div{
+            width: 45%;
+            height: 100%;
+        }
+       
 
-        .logoes div {
+        /* .logoes div {
             height: 100%;
             background-color: indigo;
             border: 1px solid black;
-        }
+        } */
 
         .pickUp_hr {
             width: 53%;
@@ -196,7 +203,8 @@
             background-size: cover;
 
         }
-        #trucks{
+
+        #trucks {
             background-image: url("https://d35ppnqksufxmo.cloudfront.net/frontend_website/e16868997019aedc7932615d63308c00.jpg");
             background-position: 100% 50%;
             background-size: cover;
@@ -308,28 +316,76 @@
             padding: 2vh 10%;
             color: rgba(255, 255, 255, 0.877);
 
+
         }
 
         /* styling vehicles container */
 
-        .vehicles_container{
+        .btn_container {
+            width: 7%;
+            height: 32vh;
+            position: absolute;
+            bottom: 0px;
+            z-index: 20;
+            background-color: white;
+
+        }
+
+        #left_btn_container {
+            left: 0px;
+            border: 2px solid rebeccapurple;
+        }
+
+        #right_btn_container {
+            right: 0px;
+            border: 2px solid gray;
+        }
+
+        #left_btn {
+            display: block;
+            width: 45%;
+            height: 20%;
+            border: 2px solid red;
+            border-radius: 50%;
+            margin-top: 80%;
+            margin-left: 40%;
+            font-size: 1.5rem;
+            background-color: rgb(75, 74, 74);
+            color: white;
+        }
+
+        #right_btn {
+            display: block;
+            width: 45%;
+            height: 20%;
+            border: 2px solid red;
+            border-radius: 50%;
+            margin-top: 80%;
+            margin-left: 10%;
+            font-size: 1.5rem;
+            background-color: rgb(75, 74, 74);
+            color: white;
+        }
+
+        #vehicles_container {
             width: 100%;
             height: 32vh;
             position: absolute;
             bottom: 0%;
-            overflow: scroll;
+            /* overflow: scroll; */
             border: 2px solid green;
             display: grid;
             grid-template-columns: repeat(8, 20%);
-            gap: 5%;
-        }
-        .vehicle_box{
-            border: 2px solid peru;
-            height: 100%;
-            
+            gap: 3.5%;
         }
 
-        .img_wrapper{
+        .vehicle_box {
+            border: 2px solid peru;
+            height: 100%;
+
+        }
+
+        .img_wrapper {
             width: 50%;
             height: 100%;
             border: 2px solid rebeccapurple;
@@ -337,103 +393,116 @@
             cursor: pointer;
         }
 
-        .vehicle_img{
+        .vehicle_img {
             width: 100%;
-            height: 70%;
+            height: 64%;
             border: 2px solid black;
             border-radius: 50%;
             margin: auto;
         }
-        #tata_ace{
+
+        #tata_ace {
             background-image: url("https://d35ppnqksufxmo.cloudfront.net/frontend_website/fb92597054186e1d2cdba0a9e322e666.jpg");
             /* background-position: top; */
             background-size: cover;
             background-position: top;
         }
-        #tata_407{
+
+        #tata_407 {
             background-image: url("https://d35ppnqksufxmo.cloudfront.net/frontend_website/6a8329bd1148a04772a360a13657597c.jpg");
             /* background-position: top; */
             background-size: cover;
             background-position: top;
         }
-        #three_wheeler{
+
+        #three_wheeler {
             background-image: url("https://d35ppnqksufxmo.cloudfront.net/frontend_website/ce1f9c469e4ff9a379cafae944d36c07.jpg");
             /* background-position: top; */
             background-size: cover;
             background-position: top;
         }
-        #ace_helper{
+
+        #ace_helper {
             background-image: url("https://d35ppnqksufxmo.cloudfront.net/frontend_website/fb92597054186e1d2cdba0a9e322e666.jpg");
             /* background-position: top; */
             background-size: cover;
             background-position: top;
         }
-        #three_wheeler_helper{
+
+        #three_wheeler_helper {
             background-image: url("https://d35ppnqksufxmo.cloudfront.net/frontend_website/bd670d8590768f0551b0f6a8fbed6c50.jpg");
             /* background-position: top; */
             background-size: cover;
             background-position: top;
         }
-        #ft_ton{
+
+        #ft_ton {
             background-image: url("https://d35ppnqksufxmo.cloudfront.net/frontend_website/4761831d3a284b0953f077b6d9dd94b9.jpg");
             /* background-position: top; */
             background-size: cover;
             background-position: top;
         }
-        #ft_pickUp{
+
+        #ft_pickUp {
             background-image: url("https://d35ppnqksufxmo.cloudfront.net/frontend_website/33896bcd86407d1f53f9c7d82548cd58.jpg");
             /* background-position: top; */
             background-size: cover;
             background-position: top;
         }
-        #two_wheeler{
+
+        #two_wheeler {
             background-image: url("https://d35ppnqksufxmo.cloudfront.net/frontend_website/2cdf1bae63c64c3d17aed68bf2703d55.jpg");
             /* background-position: top; */
             background-size: cover;
             background-position: top;
         }
 
-        .vehicle_name{
+        .vehicle_name {
             font-size: 0.9rem;
             font-weight: bolder;
-             text-align: center;
-             margin-top: 2vh;
-             color: rgba(0, 0, 255, 0.753);
+            text-align: center;
+            margin-top: 2vh;
+            color: rgba(0, 0, 255, 0.753);
         }
 
         /* styling show_vehicle_container */
 
-        #show_vehicle_container{
+        #show_vehicle_container {
             width: 100%;
             height: 90vh;
             border: 2px solid blue;
             padding: 10vh 5%;
         }
-        .show_wrapper{
-            width:  100%;
+
+        .show_wrapper {
+            width: 100%;
             height: 100%;
             border: 2px solid blue;
             display: flex;
         }
-        .show_items{
+
+        .show_items {
             width: 50%;
             height: 100%;
             border: 2px solid black;
 
         }
-        .img_show{
+
+        .img_show {
             text-align: center;
         }
-        .rent_box{
+
+        .rent_box {
             display: flex;
         }
 
-        .info_dives{
+        .info_dives {
             width: 50%;
             height: 100%;
             border: 2px solid rebeccapurple;
         }
-        .fares_box{
+
+        .fares_box {
             margin-top: 5vh;
             width: 98%;
             height: 12vh;
@@ -444,15 +513,10 @@
             padding: 3.5vh 5%;
             border-radius: 0.3rem;
         }
-        .fares_box span{
+
+        .fares_box span {
             color: rgba(0, 0, 255, 0.795);
         }
-        
-
-
-
-
-
     </style>
 </head>
 
@@ -472,8 +536,12 @@
                 <div class="lower">
                     <h4>Download the Porter app on</h4>
                     <div class="logoes">
-                        <div></div>
-                        <div></div>
+                        <div>
+                            <img src="https://d35ppnqksufxmo.cloudfront.net/frontend_website/7d201f8ab29758060a506b8f5ca8802e.svg" alt="">
+                        </div>
+                        <div>
+                            <img src="https://d35ppnqksufxmo.cloudfront.net/frontend_website/064db81ca0ea310731f96e53580dcc99.svg" alt="">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -611,36 +679,36 @@
         </div>
 
 
-        <div class="vehicles_container">
+        <div id="vehicles_container">
             <div class="vehicle_box">
                 <div class="img_wrapper">
                     <div class="vehicle_img" id="tata_ace">
 
                     </div>
                     <div class="vehicle_name">
-                         TATA ACE
+                        TATA ACE
                     </div>
                 </div>
             </div>
             <div class="vehicle_box">
-               <div class="img_wrapper">
-                <div class="vehicle_img" id="tata_407">
+                <div class="img_wrapper">
+                    <div class="vehicle_img" id="tata_407">
 
+                    </div>
+                    <div class="vehicle_name">
+                        TATA407
+                    </div>
                 </div>
-                <div class="vehicle_name">
-                    TATA407
-               </div>
-               </div>
             </div>
             <div class="vehicle_box">
-               <div class="img_wrapper">
-                <div class="vehicle_img" id="three_wheeler">
+                <div class="img_wrapper">
+                    <div class="vehicle_img" id="three_wheeler">
 
+                    </div>
+                    <div class="vehicle_name">
+                        3 WHEELER
+                    </div>
                 </div>
-                <div class="vehicle_name">
-                    3 WHEELER
-               </div>
-               </div>
             </div>
             <div class="vehicle_box">
                 <div class="img_wrapper">
@@ -649,18 +717,18 @@
                     </div>
                     <div class="vehicle_name">
                         ACE (HELPER)
-                   </div>
+                    </div>
                 </div>
             </div>
             <div class="vehicle_box">
-              <div class="img_wrapper">
+                <div class="img_wrapper">
                     <div class="vehicle_img" id="three_wheeler_helper">
 
                     </div>
                     <div class="vehicle_name">
                         3 WHEELER (HELPER)
-                   </div>
-              </div>
+                    </div>
+                </div>
             </div>
             <div class="vehicle_box">
                 <div class="img_wrapper">
@@ -669,30 +737,44 @@
                     </div>
                     <div class="vehicle_name">
                         8FT 1TON
-                   </div>
+                    </div>
                 </div>
             </div>
             <div class="vehicle_box">
                 <div class="img_wrapper">
-                <div class="vehicle_img" id="ft_pickUp">
+                    <div class="vehicle_img" id="ft_pickUp">
 
+                    </div>
+                    <div class="vehicle_name">
+                        8FT PICKUP
+                    </div>
                 </div>
-                <div class="vehicle_name">
-                    8FT PICKUP
-               </div>
-            </div>
             </div>
             <div class="vehicle_box">
                 <div class="img_wrapper">
-                <div class="vehicle_img" id="two_wheeler">
+                    <div class="vehicle_img" id="two_wheeler">
 
+                    </div>
+                    <div class="vehicle_name">
+                        2 WHEELER
+                    </div>
                 </div>
-                <div class="vehicle_name">
-                    2 WHEELER
-               </div>
-            </div>
             </div>
         </div>
+
+        <div id="left_btn_container" class="btn_container">
+
+            <button id="left_btn" onclick="khisakLeft()">
+                < </button>
+
+        </div>
+        <div id="right_btn_container" class="btn_container">
+
+            <button id="right_btn" onclick="khisakRight()">
+                > </button>
+
+        </div>
+
 
     </div>
 
@@ -702,9 +784,10 @@
     </div> -->
 
     <div id="show_vehicle_container">
-         <div class="show_wrapper">
+        <div class="show_wrapper">
             <div class="show_items img_show">
-                <img src="https://d3o1t8vp7n8wsg.cloudfront.net/assets/website_revamp/large_vehicles/tata_ace-e92a36b3508e6e3b1804fd2015adbfb6c948bc35afab36699440785ed83b5b24.png" alt="">
+                <img src="https://d3o1t8vp7n8wsg.cloudfront.net/assets/website_revamp/large_vehicles/tata_ace-e92a36b3508e6e3b1804fd2015adbfb6c948bc35afab36699440785ed83b5b24.png"
+                    alt="">
             </div>
             <div class="show_items rent_box">
                 <div class="info_dives">
@@ -715,9 +798,42 @@
                 </div>
                 <div class="info_dives"></div>
             </div>
-         </div>
+        </div>
     </div>
+
 
 </body>
 
 </html>
+
+
+<script>
+
+    let vehicles_container = document.getElementById("vehicles_container");
+
+    function khisakLeft() {
+
+        vehicles_container.style.transform = "translate(-800px , 0px)"
+    }
+
+    function khisakRight() {
+        vehicles_container.style.transform = "translate(200px , 0px)"
+    }
+
+
+    let rent_details = [
+        {
+            vehicle_img:"TATA ACE",
+            heading : "",
+            price : "₹210",
+            distance : "1.0 km",
+            time:"70 minutes",
+            capacity : "750kg",
+            size : "7ft x 4ft x 5ft"
+            
+        }
+    ]
+
+    
+
+</script>
