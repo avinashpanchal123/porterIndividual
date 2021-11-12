@@ -10,13 +10,19 @@
     <style>
         body {
             background-color: rgba(240, 240, 240, 0.418);
-            font-family: 'Titillium Web', sans-serif;
+           
         }
 
         * {
             padding: 0;
             margin: 0;
             box-sizing: border-box;
+            font-family: 'Titillium Web', sans-serif;
+        }
+
+        .website-home::-webkit-scrollbar {
+            width: 0px;
+            background: transparent
         }
 
 
@@ -40,32 +46,38 @@
             width: 37%;
             height: 30vh;
             border: 2px solid black;
-            /* margin-left: 5%; */
             display: grid;
             grid-template-columns: 10% 90%;
         }
 
-        .pickUp>div {
+        /* .pickUp>div {
             border: 1px solid red;
-        }
+        } */
 
         .number_div {
             padding: 0;
-            font-size: 45px;
+            font-size: 4rem;
             font-weight: 700;
             color: silver;
         }
 
         .h2_margin {
             margin-bottom: 1vh;
-            margin-top: 1%;
+            margin-top: 2.8%;
 
+        }
+        .para_font{
+            font-size: 0.8rem;
+        }
+        .silver_color{
+            color: rgb(146, 146, 146);
         }
 
         .pickUp_right {
             display: grid;
             grid-template-columns: repeat(1, 100%);
             grid-template-rows: repeat(2, 50%);
+            
         }
 
         .logoes {
@@ -288,7 +300,7 @@
             right: 5%;
 
             top: 65%;
-            border: 2.5px solid white;
+            border: 0.17rem solid white;
         }
 
         #vinay {
@@ -327,19 +339,19 @@
             width: 7%;
             height: 32vh;
             position: absolute;
-            bottom: 0px;
+            bottom: 0%;
             z-index: 20;
             background-color: white;
 
         }
 
         #left_btn_container {
-            left: 0px;
+            left: 0%;
             border: 2px solid rebeccapurple;
         }
 
         #right_btn_container {
-            right: 0px;
+            right: 0%;
             border: 2px solid gray;
         }
 
@@ -557,7 +569,9 @@
 
 </head>
 
-<body>
+<body class="website-home">
+    <div class="website-home" id="main_div">
+        
     <div id="app_promo">
         <!-- Pickup and drop anywhere within the city box -->
 
@@ -567,11 +581,11 @@
             </div>
             <div class="pickUp_right">
                 <div class="upper">
-                    <h2 class="h2_margin">Pickup and drop anywhere within the city</h2>
-                    <p>Choose your pickup & drop location from within the city</p>
+                    <h4 class="h2_margin">Pickup and drop anywhere within the city</h4>
+                    <p class="para_font silver_color">Choose your pickup & drop location from within the city</p>
                 </div>
                 <div class="lower">
-                    <h4>Download the Porter app on</h4>
+                    <h5>Download the Porter app on</h5>
                     <div class="logoes">
                         <div>
                             <img src="https://d35ppnqksufxmo.cloudfront.net/frontend_website/7d201f8ab29758060a506b8f5ca8802e.svg"
@@ -593,8 +607,8 @@
         <div class="firstGrid">
             <div class="number_div"> 2</div>
             <div>
-                <h2 class="h2_margin">Choose vehicle of your choice</h2>
-                <p>Get quotes for vehicles which can carry from 20 kgs to 2000 kgs and book instantly without any
+                <h4 class="h2_margin">Choose vehicle of your choice</h4>
+                <p class="para_font silver_color">Get quotes for vehicles which can carry from 20 kgs to 2000 kgs and book instantly without any
                     waiting</p>
             </div>
         </div>
@@ -605,8 +619,8 @@
         <div class="firstGrid">
             <div class="number_div"> 3</div>
             <div>
-                <h2 class="h2_margin">Choose vehicle of your choice</h2>
-                <p>Our verified partner will ensure that your goods are transported safely to the destination. You can
+                <h4 class="h2_margin">Choose vehicle of your choice</h4>
+                <p class="para_font silver_color">Our verified partner will ensure that your goods are transported safely to the destination. You can
                     monitor the trip with live vehicle tracking and regular
                     sms/email updates from our <span class="dark_grey">MOBILE APP</span> or</p>
                 <a class="track_link" href="">TRACK ORDER HERE</a>
@@ -868,6 +882,7 @@
 
             </div>
         </div>
+    </div>
     </div>
 
 
