@@ -244,3 +244,300 @@ function uppendVehicle(id) {
 
 }
 
+
+// here is the script for pickup and dropoff container
+
+
+let PUNE = [
+    "katraj Pune Maharashtra",
+    "katepuram chowk",
+    "aga Khan Palace",
+    "rajiv Gandhi Zoological Park",
+    "shaniwar Wada Fort",
+    "shiwajinagar Pune,Maharashtra",
+    "akurdi Pune,Maharashtra",
+    "kothrud Pune,Maharashtra",
+    "koregon Park Pune,Maharashtra",
+    "sanghavi Pune,Maharashtra",
+    "pune junction Maharashtra",
+    "pimple-Saudagar Pune Maharashtra",
+    "khandala Pune,Maharashtra",
+    "lonawala Pune,Maharashtra",
+    "wagholi Pune,Maharashtra",
+    "bavdhan Pune,Maharashtra",
+    "wakad Pune,Maharashtra",
+    "hadapsar Pune,Maharashtra",
+    "kharadi Pune,Maharashtra",
+    "hinjewadi Pune,Maharashtra",
+    "aundh Pune,Maharashtra"
+];
+
+let DELHI = [
+    "asafali road",
+    "bhikaji kama Palace",
+    "chandni chawk new Delhi",
+    "civil lines",
+    "new frinds colony",
+    "green park",
+    "nehru place",
+    "pushpanjali farms"
+]
+
+
+
+
+if (localStorage.getItem("cities") === null) {
+    localStorage.setItem("cities", JSON.stringify({}))
+}
+
+let cityObj = JSON.parse(localStorage.getItem("cities"));
+
+cityObj["PUNE"] = PUNE;
+
+cityObj["DELHI"] = DELHI;
+
+console.log(cityObj);
+
+
+
+
+
+// localStorage.clear()
+
+
+
+
+//  here enabaling visibility of city container 
+
+let city_container = document.getElementById("city_container");
+function showCity() {
+
+
+    city_container.style.display = "block"
+    drop_container.style.display = "none"
+    pickUp_container.style.display = "none"
+}
+
+// accecing each city value
+
+let cityName = document.querySelectorAll(".cityName");
+
+cityName.forEach((el) => {
+    el.onclick = () => {
+        selectCity(el.textContent)
+    }
+})
+
+
+
+
+
+function selectCity(cityName) {
+    let cityName_input = document.getElementById("cityName_input");
+
+    cityName_input.value = cityName;
+
+    city_container.style.display = "none"
+}
+
+
+// accecing requirement value
+
+let requirements = document.querySelectorAll(".requirement");
+
+requirements.forEach((el) => {
+    el.onclick = () => {
+        select_requirement(el.textContent)
+    }
+})
+
+
+function select_requirement(requirement) {
+    let requirement_input = document.getElementById("requirement");
+
+    requirement_input.value = requirement;
+
+    requirement_container.style.display = "none"
+
+}
+
+
+// here enabaling visibility of pickUp_container
+
+let pickUp_container = document.getElementById("pickUp_container")
+
+function show_pickUp_container() {
+    pickUp_container.style.display = "block"
+    drop_container.style.display = "none"
+    city_container.style.display = "none"
+}
+
+// here enabaling visibility of drop_container
+
+let drop_container = document.getElementById("drop_container")
+
+function show_drop_container() {
+    drop_container.style.display = "block"
+    pickUp_container.style.display = "none"
+    city_container.style.display = "none"
+}
+
+//here enabling visibility of requirement container
+
+let requirement_container = document.getElementById("requirement_container")
+
+function show_requirement() {
+    requirement_container.style.display = "block";
+    drop_container.style.display = "none"
+    pickUp_container.style.display = "none"
+    city_container.style.display = "none"
+
+}
+
+//  appending pickUp_address in the pickUp container
+
+function pickUp_locality() {
+    pickUp_container.innerHTML = null;
+
+    let cityName_input = document.getElementById("cityName_input").value;
+
+    let pickUp = document.getElementById("pickUp").value;
+
+
+
+    let output = cityObj[cityName_input];
+
+    output.forEach((el) => {
+        let count = 0;
+        for (let i = 0; i < pickUp.length; i++) {
+            if (el[i] == pickUp[i]) {
+                count++
+            }
+        }
+
+
+        if (count == pickUp.length) {
+
+            let locality = document.createElement("div");
+
+            locality.textContent = el;
+
+            let line = document.createElement("hr")
+
+            pickUp_container.append(locality, line);
+
+            locality.onclick = () => {
+                pickUp_address(locality.textContent)
+            }
+        }
+    })
+
+    // console.log(output);
+
+
+}
+
+
+function pickUp_address(addres) {
+
+    let pickUp_address = document.getElementById("pickUp");
+
+    pickUp.value = addres;
+
+    pickUp_container.style.display = "none"
+}
+
+
+// appending dropoff address in the drop off container
+
+
+function dropOff_locality() {
+    drop_container.innerHTML = null;
+    let cityName_input = document.getElementById("cityName_input").value;
+
+    let dropOff = document.getElementById("dropOff").value;
+
+
+
+    let output = cityObj[cityName_input];
+
+    output.forEach((el) => {
+        let count = 0;
+        for (let i = 0; i < dropOff.length; i++) {
+            if (el[i] == dropOff[i]) {
+                count++
+            }
+        }
+
+        if (count == dropOff.length) {
+
+            let locality = document.createElement("div");
+
+            locality.textContent = el;
+
+            let line = document.createElement("hr")
+
+            drop_container.append(locality, line);
+
+            locality.onclick = () => {
+                dropOff_address(locality.textContent)
+            }
+        }
+    })
+
+    // console.log(output);
+
+}
+
+
+function dropOff_address(addres) {
+
+    let dropOff_address = document.getElementById("dropOff");
+
+    dropOff.value = addres;
+
+    drop_container.style.display = "none"
+}
+
+
+// pickupp dropp off form validation
+
+function validation(e) {
+
+    e.preventDefault()
+
+    let form = document.getElementById("search_form");
+
+    let transport_details = {
+        cityName: form.cityName_input.value,
+        pickUp_address: form.pickUp.value,
+        dropOff_address: form.dropOff.value,
+
+        mobile: form.mob.value,
+
+        requirement: form.requirement.value
+
+    }
+
+    let details = Object.values(transport_details);
+
+    let flag = true
+
+    for (let i = 0; i < details.length; i++) {
+        if (details[i] == "") {
+            flag = false
+        }
+    }
+
+    if (flag == false) {
+        alert("Please fill all the details")
+    }
+    else {
+        window.location.href = "fare_estimate.html"
+    }
+
+
+
+}
+
+

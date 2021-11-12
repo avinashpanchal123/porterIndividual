@@ -14,7 +14,53 @@
 
 <body class="website-home">
     <div class="website-home" id="main_div">
-        <div id="slide"></div>
+      
+
+        <div id="slider_wrapper">
+            <div id="slide">
+           
+            </div>
+
+            <div id="search_container">
+                <form onsubmit="validation(event)" action="" id="search_form">
+                    <input id="cityName_input" onclick="showCity()" type="text" placeholder="city">
+        
+                    <input  oninput=" pickUp_locality()" onclick="show_pickUp_container()" id="pickUp" type="text"
+                        placeholder="Enter PickUp Address">
+                    <input oninput="dropOff_locality()" onclick="show_drop_container()" id="dropOff" type="text"
+                        placeholder="Enter DropOff Address">
+                    <input id="mob" type="text" placeholder="Enter Mobile Number">
+                    <input type="text" placeholder="Name(Optional)">
+                    <input onclick="show_requirement()" id="requirement" type="text" placeholder="Requirement">
+                    <button id="get_estimate_btn">GET ESTIMETE</button>
+                </form>
+        
+        
+                <div class="non_visible_containers">
+                    <div class="background_white" id="city_container">
+                        <div class="cityName">PUNE</div>
+                        <div class="cityName">MUMBAI</div>
+                        <div class="cityName">BANGALORE</div>
+                        <div class="cityName">DELHI</div>
+                        <div class="cityName">CHENNAI</div>
+                    </div>
+        
+                    <div  class="website-home background_white" id="pickUp_container">
+        
+                    </div>
+                    <div class="website-home background_white" id="drop_container">
+        
+                    </div>
+                    <div class="background_white" id="requirement_container">
+                        <div class="requirement">PERSONAL</div>
+                        <div class="requirement">BUSINESS</div>
+                        <div class="requirement">HOUSE SHIFTNG</div>
+                    </div>
+                </div>
+        
+        
+            </div>
+        </div>
 
         <div id="app_promo">
             <!-- Pickup and drop anywhere within the city box -->

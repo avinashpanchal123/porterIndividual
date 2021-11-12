@@ -24,11 +24,159 @@ body {
     margin-bottom: 1.5vh;
 }
 
-#slide{
+#slider_wrapper{
     position: relative;
     width: 100%;
     height: 62vh;
+}
+
+#slide{
+    /* position: relative; */
+    width: 100%;
+    height: 100%;
     /* border: 2px solid green; */
+}
+
+
+/* styling for pickup and dropp off container  */
+
+#search_container{
+    position: absolute;
+    z-index: 50;
+    bottom: 4%;
+    width: 100%;
+
+}
+
+
+form input,
+button {
+    display: inline-block;
+    padding-left: 5%;
+
+
+}
+
+#search_form {
+    display: grid;
+    width: 95%;
+    /* border: 2px solid black; */
+    height: 8.5vh;
+    margin-top: 5vh;
+    margin-left: 2.5%;
+    grid-template-columns: 10% 17% 17% 15% 14% 14% 12%;
+    background-color: white;
+
+}
+
+.non_visible_containers {
+    width: 95%;
+    margin-left: 2.5%;
+    position: relative;
+    display: flex;
+}
+.background_white{
+    background-color: white;
+}
+
+#city_container {
+    width: 10%;
+    height: 40vh;
+    border: 2px solid black;
+    display: none;
+    position: absolute;
+    left: 0%;
+    top: -15vh;
+    border-radius: 1rem;
+}
+
+#city_container div {
+    /* margin-top: 0.5vh; */
+    font-size: 0.8rem;
+    margin: 0.7vh 8%;
+    cursor: pointer;
+
+}
+
+#pickUp_container {
+    width: 17%;
+    height: 20vh;
+    border: 2px solid black;
+    display: none;
+    position: absolute;
+    left: 10%;
+    overflow: scroll;
+
+}
+
+.website-home::-webkit-scrollbar {
+    width: 0px;
+    background: transparent
+}
+
+#pickUp_container div {
+    /* margin-top: 0.5vh; */
+    font-size: 0.8rem;
+    margin: 0.7vh 8%;
+    cursor: pointer;
+
+}
+
+#drop_container {
+    width: 17%;
+    height: 20vh;
+    border: 2px solid black;
+    display: none;
+    position: absolute;
+    left: 27%;
+    overflow: scroll;
+
+}
+
+#drop_container div {
+    /* margin-top: 0.5vh; */
+    font-size: 0.8rem;
+    margin: 0.7vh 8%;
+    cursor: pointer;
+
+}
+
+#requirement_container {
+    width: 14%;
+    height: 15vh;
+    position: absolute;
+    right: 13%;
+    border: 2px solid black;
+    display: none;
+    top: -7vh;
+    z-index: 3;
+    background-color: white;
+    overflow: hidden;
+
+}
+
+#requirement_container div {
+
+    font-size: 0.8rem;
+    margin: 0.7vh 8%;
+    cursor: pointer;
+
+}
+
+/* #requirement_container  div :active{
+   background-color: rgb(105, 105, 241);
+   color: white;
+} */
+#get_estimate_btn {
+    width: 95%;
+    height: 90%;
+    margin-left: 5%;
+    background-color: rgb(106, 106, 238);
+    color: white;
+    font-size: 1rem;
+    font-weight: bolder;
+    margin-top: 1%;
+    border: none;
 }
 
 #app_promo {
