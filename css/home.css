@@ -81,8 +81,8 @@ button {
 
 #city_container {
     width: 10%;
-    height: 40vh;
-    border: 2px solid black;
+    height: 25vh;
+    /* border: 2px solid black; */
     display: none;
     position: absolute;
     left: 0%;
@@ -101,7 +101,7 @@ button {
 #pickUp_container {
     width: 17%;
     height: 20vh;
-    border: 2px solid black;
+    /* border: 2px solid black; */
     display: none;
     position: absolute;
     left: 10%;
@@ -125,7 +125,7 @@ button {
 #drop_container {
     width: 17%;
     height: 20vh;
-    border: 2px solid black;
+    /* border: 2px solid black; */
     display: none;
     position: absolute;
     left: 27%;
@@ -146,7 +146,7 @@ button {
     height: 15vh;
     position: absolute;
     right: 13%;
-    border: 2px solid black;
+    /* border: 2px solid black; */
     display: none;
     top: -7vh;
     z-index: 3;
@@ -545,6 +545,7 @@ button {
     display: grid;
     grid-template-columns: repeat(8, 11%);
     gap: 7%;
+  
     
 }
 

@@ -8,35 +8,35 @@ let images = [
     "https://porter-website-banners.s3-ap-southeast-1.amazonaws.com/prod/home/all/Helper_compressed.png"
 
 ];
-     let cont = document.getElementById("slide");
-    let interval;
-    
-    function slide() {
-    
-               let count = 0;
-               let img = document.createElement("img");
-               img.src = images[0];
-    cont.append(img);
-    count = count + 1;
-    
-    
-      let interval = setInterval(function(){
-    cont.innerHTML =  null;
-    if (count == images.length) {
-    count = 0;
-    }
-    
+let cont = document.getElementById("slide");
+let interval;
+
+function slide() {
+
+    let count = 0;
     let img = document.createElement("img");
-    img.src = images[count];
+    img.src = images[0];
     cont.append(img);
-    
     count = count + 1;
-    },3000)
-    
-    }
-    
-    slide();
-    
+
+
+    let interval = setInterval(function () {
+        cont.innerHTML = null;
+        if (count == images.length) {
+            count = 0;
+        }
+
+        let img = document.createElement("img");
+        img.src = images[count];
+        cont.append(img);
+
+        count = count + 1;
+    }, 3000)
+
+}
+
+slide();
+
 
 
 
@@ -207,7 +207,7 @@ function uppendVehicle(id) {
 
     let img = document.createElement("img");
 
-    if( id == 2 || id == 4 || id ==7){
+    if (id == 2 || id == 4 || id == 7) {
         img.style.width = "100%";
         img.style.height = '100%'
     }
@@ -283,6 +283,69 @@ let DELHI = [
     "pushpanjali farms"
 ]
 
+let MUMBAI = ["Andheri - Kurla Road",
+    "andheri (E) - Marol",
+    "andheri (E) - MIDC",
+    "andheri (E) - Station",
+    "andheri (W)",
+    "ballard Estate",
+    "band Stand",
+    "bandra (E)",
+    "bandra (W)",
+    "bandra Kurla Complex",
+    "byculla",
+    "chembur",
+    "church Gate",
+    "colaba",
+    "cuffe Parade",
+    "dadar (Central)",
+    "dadar (West)",
+    "domestic Airport",
+    "gateway of India",
+    "goregaon (E)",
+    "goregaon (W)",
+    "international airport"
+];
+
+let BANGALORE = ["around Railway Station",
+"begur Kopa Road",
+"doddaballapur Road",
+"electronic City",
+"hebbal",
+"hesaraghatta",
+"hoskote",
+"hosur",
+"hosur Road",
+"indiranagar",
+"international airport",
+"jayanagar",
+"jp nagar",
+"kaggalipura",
+"kga Golf Course",
+"koramangala",
+"krishnarajapuram"
+]
+let lUCKNOW = ["gomti Nagar",
+"jankipuram",
+"indira Nagar",
+"rajajipuram",
+"chinhat",
+"alambagh",
+"aliganj",
+"hazratganj",
+"nishatganj"
+]
+
+let JAIPUR = [
+    "shreenath Plaza, Near Sagar Market, Ajmer Road, Bhankrota",
+    "kalwar Road, Anand Laxmi Plot 1,2, Jhotwara Road, Jaipur (Raj)	Jaipur	Rajasthan",		
+    "shiprapath , Mansarovar , Jaipur	Jaipur	Rajasthan",		
+    "unit-I, Divl.Office Campus , Bhawani Singh Road , Jaipur",	
+    "sunder Nagar, Girdhar Marg, J.L.N. Marg, Malviya Nagar, Jaipur	Jaipur	Rajasthan",	
+    "p & Gs Divl.Office Campus, Bhawani Singh Road, Jaipur	Jaipur	Rajasthan",	
+    "divl.Office Jeevan Prakash, Bhawani Singh Road, Jaipur",	
+    "dab, 1, Gopinath Marg, G.P.O., Jaipur"
+    ]
 
 
 
@@ -296,13 +359,21 @@ cityObj["PUNE"] = PUNE;
 
 cityObj["DELHI"] = DELHI;
 
+cityObj["BANGALORE"] = BANGALORE;
+
+cityObj["lUCKNOW"] = lUCKNOW;
+
+cityObj["JAIPUR"] = JAIPUR;
+
+cityObj["MUMBAI"] = MUMBAI;
+
 console.log(cityObj);
 
 
 
 
 
-// localStorage.clear()
+
 
 
 
@@ -494,13 +565,22 @@ function dropOff_address(addres) {
 
     let dropOff_address = document.getElementById("dropOff");
 
-    dropOff.value = addres;
+    dropOff_address.value = addres;
 
     drop_container.style.display = "none"
 }
 
 
 // pickupp dropp off form validation
+
+
+if (localStorage.getItem("last_transport") == null) {
+    localStorage.setItem("last_transport", JSON.stringify([]))
+}
+
+
+
+
 
 function validation(e) {
 
@@ -533,6 +613,17 @@ function validation(e) {
         alert("Please fill all the details")
     }
     else {
+        let last_transport = JSON.parse(localStorage.getItem("last_transport"));
+
+        last_transport.push(transport_details);
+
+        localStorage.setItem("last_transport", JSON.stringify(last_transport));
+
+        let update = JSON.parse(localStorage.getItem("last_transport"));
+
+        console.log(update);
+
+
         window.location.href = "fare_estimate.html"
     }
 
